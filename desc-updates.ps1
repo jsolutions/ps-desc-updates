@@ -23,7 +23,7 @@ foreach ($file in Get-ChildItem -Path "$scriptPath" -Filter "*.csv") {
 
         # Modify the description of $cn using $row.NewDescription
         if ($cn -and $row.NewDescription) {
-            Set-ADObject -Identity $cn -Description $row.NewDescription
+            Set-ADGroup -Identity $cn -Description $row.NewDescription
         }
 
     }
